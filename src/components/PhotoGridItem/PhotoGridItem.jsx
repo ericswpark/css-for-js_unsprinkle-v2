@@ -5,7 +5,7 @@ const PhotoGridItem = ({ id, src, alt, tags }) => {
   return (
     <article>
       <Anchor href={`/photos/${id}`}>
-        <picture>
+        <picture alt={alt}>
         <source
             type="image/avif"
             srcSet={`
@@ -22,7 +22,7 @@ const PhotoGridItem = ({ id, src, alt, tags }) => {
               ${src.replace('.jpg', '@3x.jpg')} 3x
             `}
           />
-          <Image src={src} />
+          <Image src={src} alt={alt} />
         </picture>
         
       </Anchor>

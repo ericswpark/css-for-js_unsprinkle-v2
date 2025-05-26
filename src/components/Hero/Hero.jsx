@@ -3,10 +3,11 @@ import styled from 'styled-components';
 
 const Hero = () => {
   const src = "/images/hero-img.jpg";
+  const alt = "Example landing - cat";
 
   return (
     <Wrapper>
-      <picture>
+      <picture alt={alt}>
         <source
             type="image/avif"
             srcSet={`
@@ -23,9 +24,9 @@ const Hero = () => {
               ${src.replace('.jpg', '@3x.jpg')} 3x
             `}
           />
-          <HeroImage src={src} />
+          <HeroImage src={src} alt={alt}/>
       </picture>
-      <Swoop src="/swoop.svg" />
+      <Swoop src="/swoop.svg" alt="" />
     </Wrapper>
   );
 };
